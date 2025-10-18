@@ -2,6 +2,8 @@ import React from "react";
 import { FaAmbulance, FaHospitalUser, FaPills, FaCalendarCheck, FaFileMedical, FaUserMd, FaHeartbeat, FaMobileAlt, FaStar } from "react-icons/fa";
 import "./LandingPage.css";
 // import MapSection from "../components2/map";
+import NearbyHospitals from "./NearbyHospitals";
+
 
 const LandingPage = () => {
   return (
@@ -21,7 +23,9 @@ const LandingPage = () => {
         </div>
       </section>
 
+
         {/* <MapSection /> */}
+        <NearbyHospitals />
 
       {/* FEATURES SECTION */}
       <section className="features">
