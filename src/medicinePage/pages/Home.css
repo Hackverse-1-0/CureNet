@@ -1,0 +1,119 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home-page {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #6fc3df, #3b82f6);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+.btn-shop {
+  background-color: #fff;
+  color: #3b82f6;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn-shop:hover {
+  background-color: #e0f2fe;
+}
+
+/* Medicines Section */
+.medicine-section {
+  padding: 50px 20px;
+}
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.filters input,
+.filters select {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s;
+}
+.filters input:focus,
+.filters select:focus {
+  border-color: #3b82f6;
+}
+
+/* Medicine Grid */
+.medicine-grid {
+  max-height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* Order Bar */
+.order-bar {
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-order {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-order:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+  .filters input, .filters select {
+    width: 100%;
+  }
+}
