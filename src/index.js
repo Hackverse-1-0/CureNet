@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import AppointmentBooking from "./appointment/AppointmentBooking";
+import Report from "./report analyses/Report";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -11,7 +12,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/appointmentbooking" element={<AppointmentBooking />} />
-        
+        <Route path="/report" element={<Report />}  />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
