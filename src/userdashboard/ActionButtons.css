@@ -1,0 +1,19 @@
+.actions-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.actions-container button {
+  padding: 12px 18px;
+  border: none;
+  background-color: #4b7bec;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.actions-container button:hover {
+  background-color: #3867d6;
+}

@@ -1,0 +1,26 @@
+.sidebar {
+  width: 220px;
+  background-color: skyblue;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+  text-decoration-color: skyblue;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px 0;
+  cursor: pointer;
+  font-size: larger;
+}
+.sidebar li:hover {
+  background-color: #33335a;
+}

@@ -1,0 +1,12 @@
+.dashboard-container {
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+.dashboard h1{
+    color:skyblue
+}
