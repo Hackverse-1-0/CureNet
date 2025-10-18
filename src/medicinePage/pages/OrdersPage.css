@@ -1,0 +1,124 @@
+.orders-page {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 25px;
+}
+
+.section-title {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #28a745;
+}
+
+.cancelled-title {
+  color: #dc3545;
+}
+
+.order-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  transition: 0.3s;
+}
+
+.order-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-card.cancelled {
+  background-color: #ffe6e6;
+  border-color: #ff4d4d;
+}
+
+.order-header h3 {
+  margin: 0 0 5px 0;
+}
+
+.order-header p {
+  margin: 2px 0;
+}
+
+.status {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.status.pending {
+  color: #ffc107;
+}
+
+.status.confirmed {
+  color: #28a745;
+}
+
+.status.cancelled {
+  color: #dc3545;
+}
+
+.order-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.order-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  flex: 1 1 200px;
+}
+
+.order-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.order-actions {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cancel-btn:hover {
+  background-color: #b30000;
+}
+
+.no-orders {
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.no-orders h2 {
+  color: #007bff;
+}
+
+.no-orders p {
+  margin-top: 10px;
+  color: #555;
+}
