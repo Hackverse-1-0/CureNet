@@ -1,0 +1,187 @@
+.hospital-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.hospital-header {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.hospital-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hospital-icon {
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.hospital-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.hospital-stats {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.hospital-stats h2 {
+  font-size: 22px;
+  color: #0077b6;
+}
+
+.book-btn {
+  background: #0077b6;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.book-btn:hover {
+  background: #005a8d;
+}
+
+.hospital-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.details-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.details-card h2,
+.details-card h3 {
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+.details-card ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.equip-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.available {
+  color: #22c55e;
+}
+
+.unavailable {
+  color: #ef4444;
+}
+
+.specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.specialties span {
+  background: #e5f4ff;
+  color: #0077b6;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.search-bar input,
+.search-bar select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.search-bar button {
+  background: #f1f5f9;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.doctor-card {
+  display: flex;
+  gap: 15px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: #fff;
+  align-items: center;
+}
+.doctor-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.doctor-card h4 {
+  margin: 0;
+  color: #0077b6;
+}
+.slots span {
+  background: #e5f4ff;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.btns {
+  margin-top: 8px;
+}
+.btns .book {
+  background: #22c55e;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-right: 5px;
+}
+.btns .profile {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+.no-data {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
