@@ -1,8 +1,11 @@
 import React from "react";
 import "./Dashboard.css";
+import Header from "../components/Header";
 
 const Dashboard = () => (
-  <div className="main-dashboard">
+  <>
+    <Header />
+    <div className="main-dashboard">
     {/* Side Navigation */}
     <aside className="sidebar">
       <div className="sidebar-header">
@@ -75,6 +78,7 @@ const Dashboard = () => (
       </section>
     </main>
   </div>
+  </>
 );
 
 export default Dashboard;

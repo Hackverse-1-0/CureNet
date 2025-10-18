@@ -4,6 +4,7 @@ import "./LandingPage.css";
 // import MapSection from "../components2/map";
 import NearbyHospitals from "./NearbyHospitals";
 
+
 const LandingPage = () => {
   return (
     <div className="landing-page">

@@ -1,6 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
 import { GoogleMap, LoadScript, InfoWindow } from "@react-google-maps/api";
 import "./NearbyHospitals.css";
+import image1 from "./assets/download (1).jpeg";
+import image2 from "./assets/download (2).jpeg";
+import image3 from "./assets/images (1).jpeg";
+import image4 from "./assets/images (2).jpeg";
+import image5 from "./assets/images (3).jpeg";
+import image6 from "./assets/images (4).jpeg";
+import image7 from "./assets/images (5).jpeg";
+import image8 from "./assets/images.jpeg";
+
 
 const NearbyHospitals = () => {
   const [userLocation, setUserLocation] = useState(null);
@@ -26,7 +35,7 @@ const NearbyHospitals = () => {
               vicinity: "123 Main St",
               rating: 4.5,
               specialties: ["Cardiology", "Neurology", "Pediatrics"],
-              image: "https://images.unsplash.com/photo-1576765607924-cf9cbd2d6c33?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300",
+              image: image1,
             },
             {
               name: "Sunrise Clinic",
@@ -34,7 +43,7 @@ const NearbyHospitals = () => {
               vicinity: "456 Oak Rd",
               rating: 4.2,
               specialties: ["Dermatology", "ENT", "General Medicine"],
-              image: "https://images.unsplash.com/photo-1588776814546-33d5d8474b6c?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300",
+              image: image2,
             },
             {
               name: "Green Care Hospital",
@@ -42,7 +51,7 @@ const NearbyHospitals = () => {
               vicinity: "789 Elm St",
               rating: 4.7,
               specialties: ["Orthopedics", "ICU", "Emergency"],
-              image: "https://images.unsplash.com/photo-1588776814546-33d5d8474b6c?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300",
+              image: image3,
             },
             {
               name: "HealthPlus Medical Center",
@@ -50,7 +59,7 @@ const NearbyHospitals = () => {
               vicinity: "321 Pine Ave",
               rating: 4.3,
               specialties: ["Cardiology", "Radiology", "Rehabilitation"],
-              image: "https://images.unsplash.com/photo-1588776814546-33d5d8474b6c?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300",
+              image: image4,
             },
             {
               name: "Sunflower Hospital",
@@ -58,7 +67,7 @@ const NearbyHospitals = () => {
               vicinity: "654 Maple St",
               rating: 4.6,
               specialties: ["Pediatrics", "Oncology", "ENT"],
-              image: "https://images.unsplash.com/photo-1576765607924-cf9cbd2d6c33?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300",
+              image: image5,
             },
               {
               name: "City Hospital",
@@ -66,7 +75,7 @@ const NearbyHospitals = () => {
               vicinity: "123 Main St",
               rating: 4.5,
               specialties: ["Cardiology", "Neurology", "Pediatrics"],
-              image: "https://images.unsplash.com/photo-1576765607924-cf9cbd2d6c33?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300",
+              image: image6,
             },
             {
               name: "Sunrise Clinic",
@@ -74,7 +83,7 @@ const NearbyHospitals = () => {
               vicinity: "456 Oak Rd",
               rating: 4.2,
               specialties: ["Dermatology", "ENT", "General Medicine"],
-              image: "https://images.unsplash.com/photo-1588776814546-33d5d8474b6c?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300",
+              image: image7,
             },
             {
               name: "Green Care Hospital",
@@ -82,7 +91,7 @@ const NearbyHospitals = () => {
               vicinity: "789 Elm St",
               rating: 4.7,
               specialties: ["Orthopedics", "ICU", "Emergency"],
-              image: "https://images.unsplash.com/photo-1588776814546-33d5d8474b6c?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300",
+              image: image8,
             },
             {
               name: "HealthPlus Medical Center",

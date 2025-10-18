@@ -15,7 +15,8 @@
 
 /* Logo */
 .logo-section {
-  display: flex;
+  width: 150px;
+  height: 50px;
   align-items: center;
   font-size: 1.4rem;
   font-weight: bold;
@@ -23,6 +24,9 @@
 }
 
 .logo-icon {
+  width: 180px;
+  height: 35px;
+  padding:10px 0;
   font-size: 1.8rem;
   margin-right: 8px;
 }
@@ -91,4 +95,11 @@
 
 .login-link:hover {
   text-decoration: underline;
+}
+
+.logout-icon{
+  padding: 0px 8px 15px 8px;
+}
+.profile-icon{
+  padding: 10px ;
 }

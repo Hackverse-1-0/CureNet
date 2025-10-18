@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaAmbulance, FaHospitalSymbol, FaUserCircle } from "react-icons/fa";
+import { FaAmbulance, FaHospitalSymbol, FaUserCircle, FaSignOutAlt } from "react-icons/fa";
 import "./Header.css";
+import image from "./assets/Picsart_25-10-17_15-36-46-695.png";
 
 const Header = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
-  // Check login status on load
   useEffect(() => {
     const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
     if (loggedInUser) setUser(loggedInUser);
@@ -25,8 +25,7 @@ const Header = () => {
       <div className="header-container">
         {/* Logo Section */}
         <div className="logo-section">
-          <FaHospitalSymbol className="logo-icon" />
-          <span className="logo-text">MediConnect</span>
+          <img src={image} alt="logo" className="logo-icon"/>
         </div>
 
         {/* Navigation Links */}
@@ -47,15 +46,22 @@ const Header = () => {
             <FaAmbulance className="btn-icon" /> Emergency
           </button>
 
-          {/* Show Login/Register or Profile Icon */}
+          {/* Login/Register or Profile + Logout */}
           {!user ? (
             <Link to="/login" className="login-link">Login / Register</Link>
           ) : (
+            <div className="profile-logout">
             <FaUserCircle
               className="profile-icon"
-              title="Click to logout"
-              onClick={handleLogout}
+              title="Profile"
+              onClick={() => navigate("/userdashboard")}
             />
+              <FaSignOutAlt
+                className="logout-icon"
+                title="Logout"
+                onClick={handleLogout}
+              />
+            </div>
           )}
         </div>
       </div>
