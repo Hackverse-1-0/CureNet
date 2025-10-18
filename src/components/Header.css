@@ -1,100 +1,94 @@
-/* Overall Header Styling */
 .main-header {
-  width: 100%;
-  background: #ffffff;
-  border-bottom: 1px solid #e3e7ee;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 40px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Container for layout */
 .header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 12px 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-/* Logo Section */
+/* Logo */
 .logo-section {
   display: flex;
   align-items: center;
-  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #007bff;
 }
 
 .logo-icon {
-  font-size: 2rem;
-  color: #0078ff;
+  font-size: 1.8rem;
+  margin-right: 8px;
 }
 
-.logo-text {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #1b2735;
-  letter-spacing: 0.5px;
-}
-
-/* Navigation Links */
+/* Nav links */
 .nav-section {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .nav-section a {
+  color: #333;
   text-decoration: none;
-  color: #334155;
   font-weight: 500;
-  font-size: 0.95rem;
-  transition: color 0.3s, border-bottom 0.3s;
-  padding-bottom: 3px;
+  transition: color 0.3s ease;
 }
 
 .nav-section a:hover {
-  color: #0078ff;
-  border-bottom: 2px solid #0078ff;
+  color: #007bff;
 }
 
-/* Emergency Button */
+/* Right side */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Emergency button */
 .emergency-btn {
-  background-color: #ff3b3b;
+  background-color: #e63946;
+  color: white;
   border: none;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.95rem;
+  padding: 10px 18px;
+  border-radius: 25px;
   cursor: pointer;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 4px 8px rgba(255, 59, 59, 0.3);
+  transition: background 0.3s ease;
 }
 
 .emergency-btn:hover {
-  background-color: #e80000;
-  transform: scale(1.03);
+  background-color: #d62828;
 }
 
-.btn-icon {
-  font-size: 1.1rem;
+/* Profile icon */
+.profile-icon {
+  font-size: 1.8rem;
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
-/* Responsive Design */
-@media (max-width: 900px) {
-  .nav-section {
-    display: none;
-  }
+.profile-icon:hover {
+  color: #0056b3;
+}
 
-  .header-container {
-    padding: 12px 20px;
-  }
+/* Login link */
+.login-link {
+  color: #007bff;
+  font-weight: 500;
+  text-decoration: none;
+}
 
-  .logo-text {
-    font-size: 1.2rem;
-  }
+.login-link:hover {
+  text-decoration: underline;
 }
