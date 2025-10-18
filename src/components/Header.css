@@ -1,0 +1,100 @@
+/* Overall Header Styling */
+.main-header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e3e7ee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Container for layout */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Section */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  color: #0078ff;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1b2735;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation Links */
+.nav-section {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-section a {
+  text-decoration: none;
+  color: #334155;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 3px;
+}
+
+.nav-section a:hover {
+  color: #0078ff;
+  border-bottom: 2px solid #0078ff;
+}
+
+/* Emergency Button */
+.emergency-btn {
+  background-color: #ff3b3b;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(255, 59, 59, 0.3);
+}
+
+.emergency-btn:hover {
+  background-color: #e80000;
+  transform: scale(1.03);
+}
+
+.btn-icon {
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .nav-section {
+    display: none;
+  }
+
+  .header-container {
+    padding: 12px 20px;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+}
