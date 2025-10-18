@@ -1,0 +1,275 @@
+/* Page Layout */
+.prof-payment-page {
+  background-color: #f4f6fa;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.prof-payment-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1100px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.prof-cart-summary {
+  flex: 1;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.prof-cart-summary h2 {
+  color: #3b82f6;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.empty-cart {
+  color: #777;
+  text-align: center;
+  padding: 50px 0;
+  font-size: 1.1rem;
+}
+
+.summary-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.summary-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 10px;
+  background-color: #f7f9fc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.summary-card:hover {
+  background-color: #f0f4ff;
+}
+
+.summary-card-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.summary-card-left img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.summary-details h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.summary-details p {
+  margin: 2px 0 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.summary-card-right p {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.summary-divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 15px 0;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.order-details {
+  background-color: #f0f4ff;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.order-details p {
+  margin: 0;
+  font-weight: 500;
+}
+.charges-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.charge-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Payment Form Section */
+.prof-payment-form {
+  flex: 1;
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.prof-payment-form h2 {
+  color: #3b82f6;
+  margin-bottom: 20px;
+}
+
+/* Tabs */
+.payment-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.payment-tabs button {
+  flex: 1;
+  padding: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px 8px 0 0;
+  background-color: #f9f9f9;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.payment-tabs button.active {
+  background-color: #3b82f6;
+  color: #fff;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.payment-tabs button:hover {
+  background-color: #e0f0ff;
+}
+
+/* Card Payment Form */
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.payment-form input {
+  margin-top: 5px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.2s;
+}
+
+.payment-form input:focus {
+  border-color: #3b82f6;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row label {
+  flex: 1;
+}
+
+/* QR Code Payment */
+.qr-payment {
+  text-align: center;
+  padding: 20px;
+  border: 1px dashed #3b82f6;
+  border-radius: 12px;
+  background-color: #f0f7ff;
+}
+
+.qr-payment p {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.qr-code {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+}
+
+/* Net Banking */
+.netbanking-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.netbanking-info select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.netbanking-info select:focus {
+  border-color: #3b82f6;
+}
+
+/* Buttons */
+.pay-btn {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .prof-payment-container {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
