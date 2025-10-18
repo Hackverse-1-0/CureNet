@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import AppointmentBooking from "./appointment/AppointmentBooking";
 import Report from "./report analyses/Report";
+import VideoGuidance from "./video Guidance/VideoGuidance";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,6 +14,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/appointmentbooking" element={<AppointmentBooking />} />
         <Route path="/report" element={<Report />}  />
+        <Route path="/videoguidance" element={<VideoGuidance />}  />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
