@@ -10,6 +10,8 @@ import OrdersPage  from "./medicinePage/pages/OrdersPage";
 
 import HospitalDetails from "./HospitalDetails/HospitalDetails";
 
+import ContactHelp from "./contactHelpPage/ContactHelp";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -23,6 +25,8 @@ root.render(
         <Route path="/orders" element={<OrdersPage />} />
     
         <Route path="/hospital-details" element={<HospitalDetails />} />
+
+        <Route path="/contactHelp" element={<ContactHelp />} />
         
       </Routes>
     </BrowserRouter>
