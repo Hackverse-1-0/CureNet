@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import "./HospitalDetails.css";
 import {
   FaClock,
   FaUserMd,
@@ -8,11 +9,10 @@ import {
   FaTimesCircle,
   FaProcedures,
 } from "react-icons/fa";
-import "./HospitalDetails.css";
 
 export default function HospitalDetails({ data }) {
   const sample = {
-    name: "Aadhya General Hospital",
+    name: "CureNet",
     address: "123 Health St, Hyderabad, Telangana",
     phone: "+91 98765 43210",
     email: "contact@aadhyahospital.com",
@@ -73,9 +73,7 @@ export default function HospitalDetails({ data }) {
 
   const availableDoctors = useMemo(() => {
     return hospital.doctors.filter((doc) => {
-      const matchesTime = selectedTime
-        ? doc.times.includes(selectedTime)
-        : true;
+      const matchesTime = selectedTime ? doc.times.includes(selectedTime) : true;
       const matchesSearch = searchDoctor
         ? (doc.name + " " + doc.specialty + " " + doc.profile)
             .toLowerCase()
@@ -92,128 +90,172 @@ export default function HospitalDetails({ data }) {
   }, [hospital.doctors]);
 
   return (
-    <div className="hospital-container">
+    <div className="hospital-page">
+      {/* Header */}
       <div className="hospital-header">
-        <div className="hospital-info">
+        <div className="hospital-header-left">
           <div className="hospital-icon">
-            <FaHospitalAlt size={42} />
+            <FaHospitalAlt />
           </div>
           <div>
-            <h1>{hospital.name}</h1>
-            <p>{hospital.address}</p>
-            <div className="hospital-meta">
-              <span>
+            <h1 className="hospital-name">{hospital.name}</h1>
+            <p className="hospital-address">{hospital.address}</p>
+            <div className="hospital-contact">
+              <div>
                 <FaClock /> {hospital.openingHours[0].time}
-              </span>
-              <span>📞 {hospital.phone}</span>
+              </div>
+              <div>{hospital.phone}</div>
             </div>
           </div>
         </div>
 
-        <div className="hospital-stats">
-          <div>
-            <h2>{hospital.stats.totalDoctors}</h2>
-            <p>Doctors</p>
+        <div className="hospital-header-right">
+          <div className="hospital-stat">
+            <p>Total Doctors</p>
+            <h3>{hospital.stats.totalDoctors}</h3>
           </div>
-          <div>
-            <h2>{hospital.stats.vacancies}</h2>
+          <div className="hospital-stat">
             <p>Vacancies</p>
+            <h3>{hospital.stats.vacancies}</h3>
           </div>
-          <button className="book-btn">Book Appointment</button>
+          <button className="btn-primary">Book Appointment</button>
         </div>
       </div>
 
-      <div className="hospital-main">
-        <div className="left-section">
-          <div className="details-card">
-            <h2>Hospital Details</h2>
+      <div className="hospital-content">
+        {/* Left Column */}
+        <div className="hospital-left">
+          <div className="hospital-info-card">
+            <h2>Hospital Information</h2>
             <p>
-              {hospital.name} offers emergency care, diagnostics, and specialty
-              clinics. Contact: <strong>{hospital.email}</strong>
+              {hospital.name} is a trusted healthcare institution providing
+              advanced medical services and specialized care. Contact us at{" "}
+              <span className="email">{hospital.email}</span> for queries.
             </p>
+
             <h3>Opening Hours</h3>
-            <ul>
-              {hospital.openingHours.map((oh, idx) => (
-                <li key={idx}>
-                  <span>{oh.day}</span> <span>{oh.time}</span>
+            <ul className="opening-hours">
+              {hospital.openingHours.map((oh, i) => (
+                <li key={i}>
+                  <span>{oh.day}</span>
+                  <span>{oh.time}</span>
                 </li>
               ))}
             </ul>
 
             <h3>Equipments & Availability</h3>
             {hospital.equipments.map((eq, i) => (
-              <div key={i} className="equip-item">
-                <div>
-                  <FaProcedures /> <span>{eq.name}</span>
+              <div key={i} className="equipment">
+                <div className="equipment-info">
+                  <FaProcedures className="eq-icon" />
+                  <div>
+                    <p className="eq-name">{eq.name}</p>
+                    <p className="eq-status">
+                      {eq.available ? "Ready for use" : "Currently unavailable"}
+                    </p>
+                  </div>
                 </div>
                 {eq.available ? (
-                  <FaCheckCircle className="available" />
+                  <FaCheckCircle className="eq-available" />
                 ) : (
-                  <FaTimesCircle className="unavailable" />
+                  <FaTimesCircle className="eq-unavailable" />
                 )}
               </div>
             ))}
           </div>
 
-          <div className="details-card">
+          <div className="specialties-card">
             <h3>Specialties</h3>
-            <div className="specialties">
+            <div className="specialty-tags">
               {hospital.stats.specialties.map((s, i) => (
-                <span key={i}>{s}</span>
+                <span key={i} className="specialty">
+                  {s}
+                </span>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="right-section">
-          <div className="details-card">
-            <div className="search-bar">
-              <input
-                type="text"
-                placeholder="Search doctor or specialty"
-                value={searchDoctor}
-                onChange={(e) => setSearchDoctor(e.target.value)}
-              />
-              <select
-                value={selectedTime}
-                onChange={(e) => setSelectedTime(e.target.value)}
-              >
-                <option value="">All times</option>
-                {timeSlots.map((t) => (
-                  <option key={t} value={t}>
-                    {t}
-                  </option>
-                ))}
-              </select>
-              <button onClick={() => { setSelectedTime(""); setSearchDoctor(""); }}>
-                Reset
-              </button>
+        {/* Right Column */}
+        <div className="hospital-right">
+          <div className="doctor-section">
+            <div className="doctor-header">
+              <div className="doctor-title">
+                <FaUserMd /> <h2>Doctors & Availability</h2>
+              </div>
+
+              <div className="filters">
+                <input
+                  value={searchDoctor}
+                  onChange={(e) => setSearchDoctor(e.target.value)}
+                  placeholder="Search doctor or specialty"
+                />
+                <select
+                  value={selectedTime}
+                  onChange={(e) => setSelectedTime(e.target.value)}
+                >
+                  <option value="">All Times</option>
+                  {timeSlots.map((t) => (
+                    <option key={t} value={t}>
+                      {t}
+                    </option>
+                  ))}
+                </select>
+                <button
+                  onClick={() => {
+                    setSearchDoctor("");
+                    setSelectedTime("");
+                  }}
+                  className="btn-reset"
+                >
+                  Reset
+                </button>
+              </div>
             </div>
 
             <div className="doctor-list">
               {availableDoctors.length === 0 ? (
-                <p className="no-data">No doctors found for selected filters.</p>
+                <p className="no-doctors">No doctors found for selected filters.</p>
               ) : (
                 availableDoctors.map((doc) => (
                   <div key={doc.id} className="doctor-card">
                     <img src={doc.image} alt={doc.name} />
-                    <div>
+                    <div className="doctor-info">
                       <h4>{doc.name}</h4>
-                      <p>{doc.specialty}</p>
-                      <small>{doc.profile}</small>
-                      <div className="slots">
-                        {doc.times.map((t) => (
-                          <span key={t}>{t}</span>
-                        ))}
-                      </div>
-                      <div className="btns">
-                        <button className="book">Book</button>
-                        <button className="profile">Profile</button>
+                      <p className="specialty-text">{doc.specialty}</p>
+                      <p className="profile-text">{doc.profile}</p>
+
+                      <div className="doctor-bottom">
+                        <div className="times">
+                          <FaStethoscope />
+                          {doc.times.map((t) => (
+                            <span key={t}>{t}</span>
+                          ))}
+                        </div>
+                        <div className="buttons">
+                          <button className="btn-book">Book</button>
+                          <button className="btn-profile">Profile</button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 ))
               )}
+            </div>
+          </div>
+
+          <div className="hospital-stats-grid">
+            <div className="stat-card">
+              <p>Total Doctors</p>
+              <h3>{hospital.stats.totalDoctors}</h3>
+            </div>
+            <div className="stat-card">
+              <p>Vacancies</p>
+              <h3>{hospital.stats.vacancies}</h3>
+            </div>
+            <div className="stat-card">
+              <p>Departments</p>
+              <h3>{hospital.stats.specialties.length}</h3>
             </div>
           </div>
         </div>

@@ -7,6 +7,7 @@ import MedicineCart from "./medicinePage/pages/Cart";
 import Payment from "./medicinePage/pages/Payment";
 import Success  from "./medicinePage/pages/Success";
 import OrdersPage  from "./medicinePage/pages/OrdersPage";
+
 import HospitalDetails from "./HospitalDetails/HospitalDetails";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -20,7 +21,7 @@ root.render(
         <Route path="/payment" element={<Payment />} />
         <Route path="/success" element={<Success />} />
         <Route path="/orders" element={<OrdersPage />} />
-
+    
         <Route path="/hospital-details" element={<HospitalDetails />} />
         
       </Routes>

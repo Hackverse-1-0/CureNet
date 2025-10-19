@@ -1,0 +1,144 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #f3f7ff, #ffffff);
+  margin: 0;
+  padding: 0;
+}
+
+.rewards-dashboard {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  padding: 30px 40px;
+}
+
+/* Points Summary */
+.points-summary {
+  background: linear-gradient(135deg, #007bff, #00c4ff);
+  color: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.points-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-points {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.progress-bar {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #00ff9d;
+}
+
+/* Rewards Catalog */
+.rewards-catalog {
+  margin-bottom: 40px;
+}
+
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.reward-card {
+  background: #f7faff;
+  border: 1px solid #d9e7ff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.reward-card h4 {
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.reward-card p {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.reward-card button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.reward-card button:hover {
+  background: #005fcc;
+}
+
+/* Redemption History */
+.redemption-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.redemption-history li {
+  background: #f9fbff;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.redemption-history .date {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Bottom Buttons */
+.bottom-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.bottom-buttons button {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.redeem-btn {
+  background: linear-gradient(90deg, #00c853, #00e676);
+  color: #fff;
+}
+
+.blue-btn {
+  background: #007bff;
+  color: #fff;
+}
+
+.orange-btn {
+  background: #ff5722;
+  color: #fff;
+}
