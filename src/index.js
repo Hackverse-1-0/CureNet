@@ -7,9 +7,8 @@ import MedicineCart from "./medicinePage/pages/Cart";
 import Payment from "./medicinePage/pages/Payment";
 import Success  from "./medicinePage/pages/Success";
 import OrdersPage  from "./medicinePage/pages/OrdersPage";
-import AppointmentBooking from "./appointment/AppointmentBooking";
-import Report from "./report analyses/Report";
-import VideoGuidance from "./video Guidance/VideoGuidance";
+
+import HospitalDetails from "./HospitalDetails/HospitalDetails";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,9 +21,9 @@ root.render(
         <Route path="/payment" element={<Payment />} />
         <Route path="/success" element={<Success />} />
         <Route path="/orders" element={<OrdersPage />} />
-        <Route path="/appointmentbooking" element={<AppointmentBooking />} />
-        <Route path="/report" element={<Report />}  />
-        <Route path="/videoguidance" element={<VideoGuidance />}  />
+    
+        <Route path="/hospital-details" element={<HospitalDetails />} />
+        
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
