@@ -1,0 +1,21 @@
+.actions-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.actions-container button {
+  padding: 12px 18px;
+  border: none;
+  background-color: #87ceeb; /* sky blue buttons */
+  color: #000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.actions-container button:hover {
+  background-color: #b0e0ff; /* lighter hover shade */
+}

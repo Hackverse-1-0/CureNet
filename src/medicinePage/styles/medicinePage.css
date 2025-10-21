@@ -1,0 +1,159 @@
+/* General Layout */
+.medicine-page {
+  font-family: "Poppins", sans-serif;
+  background: #f8fafc;
+  color: #222;
+  padding-bottom: 60px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #0099ff 0%, #6dd5fa 100%);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0 8px 20px rgba(0, 153, 255, 0.2);
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin-bottom: 25px;
+}
+
+.shop-btn {
+  background: #fff;
+  color: #0077cc;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.shop-btn:hover {
+  background: #e0f0ff;
+}
+
+/* Medicine Section */
+.medicine-section {
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #0077cc;
+}
+
+.section-subtitle {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Medicine Grid */
+.medicine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+/* Medicine Card Styling */
+.medicine-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.medicine-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.medicine-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.medicine-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 6px 0;
+}
+
+.medicine-card .price {
+  font-weight: 600;
+  color: #0077cc;
+  margin-top: 5px;
+}
+
+.add-btn {
+  margin-top: 10px;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.add-btn:hover {
+  background: #005fa3;
+}
+
+/* Cart Summary */
+.cart-summary {
+  background: #fff;
+  margin: 50px auto;
+  width: 80%;
+  max-width: 600px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.15);
+}
+
+.cart-summary h3 {
+  color: #0077cc;
+  margin-bottom: 20px;
+}
+
+.cart-summary ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.cart-summary li {
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+  color: #333;
+}
+
+.order-btn {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #1e8b38;
+}

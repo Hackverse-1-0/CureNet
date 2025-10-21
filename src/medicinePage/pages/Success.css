@@ -1,0 +1,40 @@
+.success-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #eef6ff;
+  font-family: "Poppins", sans-serif;
+}
+
+.success-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
+}
+
+.success-box h1 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.success-box p {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.success-box button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.success-box button:hover {
+  background: #0056b3;
+}
